@@ -12,6 +12,29 @@
 // }
 
 
+function handleKeyboardKeyUpEvent(event){
+    const playerPressed = event.key;
+    console.log('player pressed', playerPressed);
+
+    // get the expected to press
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    // const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed, currentAlphabet);
+
+    // check matched or not
+    if(playerPressed === currentAlphabet){
+        console.log('you get a point');
+    }
+    else{
+        console.log('you missed. you lost a life');
+    }
+}
+
+
+document.addEventListener('keyup', handleKeyboardKeyUpEvent);
+
+
 function handleKeyboardButtonPress(){
     console.log('button pressed');
 }
