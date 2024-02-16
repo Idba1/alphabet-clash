@@ -11,7 +11,17 @@
 //     // console.log(playGround.classList);
 // }
 
+
+function continueGame(){
+    // step-1: generate a random alphabet
+    const alphabet = getARandomAlphabet();
+    console.log("your random alphabet",alphabet)
+
+}
+
+
 function play(){
     hideElementById('home-screen');
     showElementById('play-ground');
+    continueGame()
 }
